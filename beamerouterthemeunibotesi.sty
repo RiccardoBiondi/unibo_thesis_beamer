@@ -1,0 +1,91 @@
+\mode<presentation>
+
+
+% these simple command define the style to print frame numbering
+\def\beamer@unibotesi@pageofpages{of}
+\DeclareOptionBeamer{pageofpages}
+{\def\beamer@unibotesi@pageofpages{#1}}
+\ExecuteOptionsBeamer{pageofpages=/}
+\ProcessOptionsBeamer
+
+% starting to customize the headline
+% we will create a title box using the Unibo theme as refirement
+% we will not use the Unibo Logo, so this theme can be used for thesis
+% presentation
+\defbeamertemplate*{headline}{unibotesi}[1]{
+
+  \ifnum \theframenumber=0
+
+    \begin{beamercolorbox}[wd=\paperwidth, ht=0.25\paperwidth]{}%
+      \begin{center}
+        {\Large\textsc{Alma Mater Studiorum $\cdot$ Universita di Bologna}}
+        \rule[0.1cm]{0.87\paperwidth}{0.1mm}
+        \rule[0.5cm]{0.87\paperwidth}{0.6mm}\\
+      %\vspace{0.005\paperwidth}
+        {\small{\textbf{School of Science \\
+                    Department of Physics and Astronomy\\
+                  Master Degree in Physics}}}
+      \end{center}
+    \end{beamercolorbox}
+
+  \else
+
+    \begin{beamercolorbox}[wd=0.05\paperwidth, ht=0.15\paperwidth, dp=0ex]{titleline}%
+    \end{beamercolorbox}
+
+    \begin{beamercolorbox}[wd=0.8\paperwidth, ht=.1ex, dp=.1ex]{verticalline}%
+    \end{beamercolorbox}
+    \vspace{0.10\paperwidth}
+
+  \fi
+}
+
+
+% Now we define the footline. It is a simple green line with university name
+% and frame number.
+
+\defbeamertemplate*{footline}{unibotesi}[1]{
+
+    \begin{beamercolorbox}[wd=\paperwidth , ht=6ex , dp=1.125ex]{titleline}%
+      \centering\textsc{ALMA MATER STUDIORUM $\cdot$ UNIVERSIT\'{A} DI BOLOGNA}
+
+      \ifnum \theframenumber=0%
+        \vspace{1.5ex}
+      \else
+        \vspace{-3.0ex}
+        \hskip.9\paperwidth\insertframenumber{}\hskip1pt\beamer@unibotesi@pageofpages{}
+        \hskip1pt\inserttotalframenumber{}\relax
+        \vspace{1.5ex}
+      \fi
+    \end{beamercolorbox}%
+  }
+
+
+%
+% Now define the theme for the frametitle
+%
+\defbeamertemplate*{frametitle}{unibotesi}[1]{
+
+  \@tempdima = \textwidth %
+  \advance \@tempdima by \beamer@leftmargin %
+  \advance \@tempdima by \beamer@rightmargin %
+  
+  \vskip -.5 \beamer@leftmargin %
+  \vspace{-0.25\paperwidth}
+
+  \begin {beamercolorbox}[ sep=\beamer@leftmargin ,wd=\the\@tempdima]{}
+    \strut \Large \insertframetitle \strut \par
+    \ifx\insertframesubtitle\@empty%
+    \else%
+      \strut \small \insertframesubtitle \strut \par%
+    \fi%
+    \end {beamercolorbox}
+  }
+
+
+% I don't like navigation symbols, so I will remove them
+\setbeamertemplate{navigation symbols}{}
+
+
+
+\mode<all>
