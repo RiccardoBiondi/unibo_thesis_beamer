@@ -5,4 +5,70 @@
 \usecolortheme{unibotesi}
 \usefonttheme{unibotesi}
 
+
+\newcommand{\@supervisor}{}
+\newcommand{\supervisor}[1]{\renewcommand{\@supervisor}{#1}}
+
+\renewcommand{\supervisor}[1]{\def\@supervisor{#1}}
+\newif\ifsupervisor
+\supervisorfalse % Set default value of conditional to false
+\def\@supervisor{} % Set default value of \@author to empty
+
+\newcommand{\supervisorcheck}{%
+    \ifx\@supervisor\empty
+    \supervisorfalse
+    \else
+    \supervisortrue
+    \fi
+}
+
+
+% eventual co-supervisor(correlatore). Remenber to add Prof, Dr, etc before the
+% name
+\newcommand{\@cosupervisor}{}
+\newcommand{\cosupervisor}[1]{\renewcommand{\@cosupervisor}{#1}}
+
+\renewcommand{\cosupervisor}[1]{\def\@cosupervisor{#1}}
+\newif\ifcosupervisor
+\cosupervisorfalse % Set default value of conditional to false
+\def\@cosupervisor{} % Set default value of \@author to empty
+
+
+\newcommand{\cosupervisorcheck}{%
+    \ifx\@cosupervisor\empty
+    \cosupervisorfalse
+    \else
+    \cosupervisortrue
+    \fi
+}
+
+
+\renewcommand{\author}[1]{\def\@author{#1}}
+\newif\ifauthor
+\authorfalse % Set default value of conditional to false
+\def\@author{} % Set default value of \@author to empty
+
+
+\newcommand{\authorcheck}{%
+    \ifx\@author\empty
+    \authorfalse
+    \else
+    \authortrue
+    \fi
+}
+
+
+\renewcommand{\date}[1]{\def\@date{#1}}
+\newif\ifdate
+\datefalse
+\def\@date{}
+
+\newcommand{\datecheck}{%
+    \ifx\@date\empty
+    \datefalse
+    \else
+      \datetrue
+      \fi
+}
+
 \mode<all>

@@ -11,4 +11,13 @@ of presentations.
 
 ## Installation
 
-# Usage
+To compile the project you can use the Makefile with the simple make command.
+
+Pay attention to add this folder to your path if you want to use this theme without strange inclusions.
+
+# Custom Commands
+
+This template implements some custom commands:
+  - *supervisor* : This command allows to insert your thesis supervisor(relatore) in the title page
+
+  - *cosupervisor* : This command allows to insert your thesis cosupervisor(correlatore) in the title page, if any.

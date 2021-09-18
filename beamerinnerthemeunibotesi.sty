@@ -16,8 +16,50 @@
 % it is formatted as unibo requires
 
 
-%\defbeamertemplate*{title page}{unibotesi}[1]{
+\defbeamertemplate*{title page}{unibotesi}[1]{
 
+  \vskip -0.1\paperwidth
+  \begin{beamercolorbox}[center, wd=.8\paperwidth, ht=.1\paperwidth]{}
+    \color{bostonuniversityred}{\usebeamerfont{title}\textbf{\inserttitle}}\par%
+
+    \ifx\insertsubtitle\@empty%
+    \else%
+      \strut \Large \insertsubtitle \strut \par%
+    \fi%
+
+  \end{beamercolorbox}
+
+  %\vskip -0.1\papaerwidth
+
+  \begin{beamercolorbox}[center, wd=.8\paperwidth, ht=.1\paperwidth]{}
+    \begin{columns}
+
+      \begin{column}{.4\paperwidth}
+        \centering
+        \authorcheck
+        \ifauthor \textbf{Submitted by:}\par\@author\else \fi\par
+      \end{column}
+
+      \begin{column}{.4\paperwidth}
+        \centering
+        \supervisorcheck
+        \ifsupervisor \textbf{Supervisor}\par\@supervisor\else \fi\par
+
+        \cosupervisorcheck
+        \ifcosupervisor \textbf{Cosupervisor}\par\@cosupervisor\else \fi\par
+      \end{column}
+
+    \end{columns}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[center, wd=.8\paperwidth, ht=0.05\paperwidth]{}
+    \centering
+    \datecheck
+    \ifdate \par\@date\else \fi
+  \end{beamercolorbox}
+
+
+}
   %\vskip - 3.\beamer@unibotesi@margin
 %  \begin{beamercolorbox}[wd=\paperwidth]{}%
 %    \begin{center}
