@@ -33,7 +33,6 @@
 \cosupervisorfalse % Set default value of conditional to false
 \def\@cosupervisor{} % Set default value of \@author to empty
 
-
 \newcommand{\cosupervisorcheck}{%
     \ifx\@cosupervisor\empty
     \cosupervisorfalse
@@ -42,6 +41,52 @@
     \fi
 }
 
+
+\newcommand{\@department}{}
+\newcommand{\department}[1]{\renewcommand{\@department}{#1}}
+
+\renewcommand{\department}[1]{\def\@department{#1}}
+\newif\ifdepartment
+\departmentfalse
+\def\@department{}
+
+\newcommand{\departmentcheck}{%
+    \ifx\@department\empty
+    \departmentfalse
+    \else
+    \departmenttrue
+    \fi
+}
+
+
+\newcommand{\@school}{}
+\newcommand{\school}[1]{\renewcommand{\@school}{#1}}
+
+\renewcommand{\school}[1]{\def\@school{#1}}
+\newif\ifschool
+\schoolfalse
+\def\@school{}
+\newcommand{\schoolcheck}{%
+  \ifx\@school\empty
+  \else
+  \schooltrue
+  \fi
+}
+
+
+\newcommand{\@degree}{}
+\newcommand{\degree}[1]{\renewcommand{\@degree}{#1}}
+
+\renewcommand{\degree}[1]{\def\@degree{#1}}
+\newif\ifdegree
+\degreefalse
+\def\@degree{}
+\newcommand{\degreecheck}{%
+  \ifx\@degree\empty
+  \else
+  \degreetrue
+  \fi
+}
 
 \renewcommand{\author}[1]{\def\@author{#1}}
 \newif\ifauthor
@@ -70,5 +115,6 @@
       \datetrue
       \fi
 }
+
 
 \mode<all>

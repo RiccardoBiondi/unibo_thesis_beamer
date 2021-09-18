@@ -18,8 +18,8 @@
 
 \defbeamertemplate*{title page}{unibotesi}[1]{
 
-  \vskip -0.1\paperwidth
   \begin{beamercolorbox}[center, wd=.8\paperwidth, ht=.1\paperwidth]{}
+
     \color{bostonuniversityred}{\usebeamerfont{title}\textbf{\inserttitle}}\par%
 
     \ifx\insertsubtitle\@empty%
@@ -28,8 +28,6 @@
     \fi%
 
   \end{beamercolorbox}
-
-  %\vskip -0.1\papaerwidth
 
   \begin{beamercolorbox}[center, wd=.8\paperwidth, ht=.1\paperwidth]{}
     \begin{columns}
@@ -46,7 +44,7 @@
         \ifsupervisor \textbf{Supervisor}\par\@supervisor\else \fi\par
 
         \cosupervisorcheck
-        \ifcosupervisor \textbf{Cosupervisor}\par\@cosupervisor\else \fi\par
+        \ifcosupervisor \textbf{Co-Supervisor}\par\@cosupervisor\else \fi\par
       \end{column}
 
     \end{columns}
@@ -57,62 +55,6 @@
     \datecheck
     \ifdate \par\@date\else \fi
   \end{beamercolorbox}
-
-
 }
-  %\vskip - 3.\beamer@unibotesi@margin
-%  \begin{beamercolorbox}[wd=\paperwidth]{}%
-%    \begin{center}
-%      {\Large\textsc{Alma Mater Studiorum $\cdot$ Universita di Bologna}}
-%      \rule[0.1cm]{0.87\paperwidth}{0.1mm}
-%      \rule[0.5cm]{0.87\paperwidth}{0.6mm}\\
-%      \vspace{0.01\paperwidth}
-%      {\small{\textbf{School of Science \\
-%                    Department of Physics and Astronomy\\
-%                    Master Degree in Physics}}}
-%    \end{center}
-%  \end{beamercolorbox}
-%  \vskip .1\paperwidth
-  %\begin{beamercolorbox}[wd=\paperwidth]{}%
-    %\begin{center}
-  %  \ifx \inserttitle \@empty
-  %  \else
-  %    \centering\usebeamerfont{title}\textbf{\color{bostonuniversityred}{\inserttitle}} \par%
-  %  \fi
-  %  \ifx \insertsubtitle \@empty
-  %  \else
-  %    {\centering\large\textbf{\color{bostonuniversityred}{\insertsubtitle}} \par}%
-  %  \fi
-  %  \end{center}
-
-  %\end{beamercolorbox}
-
-  %\vskip .1\paperwidth
-
-  %\ifx \insertauthor \@empty
-  %\else
-%    \centering\insertauthor\par%
-%  \fi
-
-%  \vskip -.01\paperwidth
-%  \ifx \insertdate \@empty
-%  \else
-%    \centering \insertdate \par %
-%  \fi
-
-
-%  \begin{beamercolorbox}[wd=\paperwidth , ht=6ex , dp=1.125ex]{titleline}%
-%    \centering\textsc{ALMA MATER STUDIORUM $\cdot$ UNIVERSIT\'{A} DI BOLOGNA}
-%  \end{beamercolorbox}%
-%  \vskip - 4.5\beamer@unibotesi@margin
-%  \hskip -\beamer@leftmargin % align the green rectangle with the left frame border
-%  \begin{beamercolorbox}[wd=0.05\paperwidth, ht=0.21\paperwidth, dp=0ex]{titleline}%
-%  \end{beamercolorbox}
-
-%  \hskip -\beamer@leftmargin %
-%  \begin{beamercolorbox}[wd=0.8\paperwidth, ht=.1ex, dp=.2ex]{verticalline}%
-%  \end{beamercolorbox}
-
-%}
 
 \mode<all>

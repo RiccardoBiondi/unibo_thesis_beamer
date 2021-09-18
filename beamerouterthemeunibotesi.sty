@@ -22,9 +22,13 @@
         \rule[0.1cm]{0.87\paperwidth}{0.1mm}
         \rule[0.5cm]{0.87\paperwidth}{0.6mm}\\
       \vspace{-0.04\paperwidth}
-        {\small{\textbf{School of Science \\
-                    Department of Physics and Astronomy\\
-                  Master Degree in Physics}}}
+        {\small{\textbf{
+                    \schoolcheck
+                    \ifschool School of \@school\\ \else \fi
+                    \departmentcheck
+                    \ifdepartment Department of \@department\\ \else \fi
+                    \degreecheck
+                    \ifdegree \@degree \else \fi }}}
       \end{center}
     \end{beamercolorbox}
 
