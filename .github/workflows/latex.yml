@@ -30,10 +30,11 @@ jobs:
       - name: Get Latest cmake
         uses: lukka/get-cmake@latest
       
-      - name: install latexmk
+      - name: install latex and beamer
         run: |
           sudo apt-get update -y
           sudo apt-get install latexmk
+          sudo apt install texlive-latex-recommended
         
       - name: compile example project
         run: |
