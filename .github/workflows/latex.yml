@@ -34,7 +34,7 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install latexmk
-          sudo apt install texlive-latex-recommended
+          sudo apt install texlive-latex-recommended  texlive-latex-extra texlive-full
         
       - name: compile example project
         run: |
